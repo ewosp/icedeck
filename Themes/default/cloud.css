@@ -1,0 +1,18 @@
+#Cloud {
+        text-align: center;
+}
+
+#Cloud A:link {
+        text-decoration: none;
+        color: #003366;
+}
+
+#Cloud A:hover {
+        text-decoration: none;
+        font-weight: bold;
+        background-color: #CCFF00;
+}
+
+#Cloud A:visited {
+        text-decoration: none;
+}

@@ -1,0 +1,26 @@
+#updatingProgressBar {
+	display: none;
+	background-color: #CE4542;
+	color: white;
+	font-size: 70%;
+	font-weight: bold;
+	margin-right: 3px;
+	padding: 1px 2px 1px 3px;
+}
+
+.metaInfos {
+	font-size: 80%;
+}
+
+.metaInfosMenu {
+        text-align: center;
+}
+
+#Keywords A {
+        text-decoration: none;
+}
+
+#Keywords A:hover {
+        text-decoration: none;
+        font-weight: bold;
+}

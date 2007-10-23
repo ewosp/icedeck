@@ -1,0 +1,117 @@
+/*
+ * Default IceDeck theme
+ *
+ * Author	Sébastien Santoro aka Dereckson - www.dereckson.be
+ * Date		2006-11-02
+ * Version	0.1
+ *
+ * The depart point of this CSS is http://bluerobot.com/web/layouts/layout1.html
+ * Original license: 
+ * Please feel free to borrow, steal, abduct, and/or torture the documents
+ * contained in the Layout Reservoir. Though you need not give credit to
+ * BlueRobot.com, a comment in your source code would help other developers
+ * to find this resource. Enjoy.
+ *
+ * The same rules applies to this CSS theme.
+ *
+ * Thanks to BlueRobot & Jean-Charles Nade not to have to work from scratch.
+ * 
+ */
+
+body {
+	margin:0px;
+	padding:0px;
+	background-color:white;
+	font-family: "Trebuchet MS", Verdana, Geneva, Helvetica, Arial, sans-serif;
+}
+
+#Header {
+	margin:50px 0px 10px 0px;
+	padding:17px 0px 0px 20px;
+	/* For IE5/Win's benefit height = [correct height] + [top padding] + [top and bottom border widths] */
+	height:43px; /* 24px + 17px + 2px = 33px */
+	border-style:solid;
+	border-color:black;
+	border-width:1px 0px; /* top and bottom borders: 1px; left and right borders: 0px */
+	line-height: 6px;
+	background-color: #4A5D84;
+	color: #EFF3FF;
+	font-size: 150%;
+	font-weight: 600;
+
+/* Here is the ugly brilliant hack that protects IE5/Win from its own 
+stupidity. Thanks to Tantek Celik for the hack and to Eric Costello for 
+publicizing it. IE5/Win incorrectly parses the "\"}"" value, prematurely 
+closing the style declaration. The incorrect IE5/Win value is above, 
+while the correct value is below. See http://glish.com/css/hacks.asp for 
+details. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	height:24px; /* the correct height */
+}
+
+/* I've heard this called the "be nice to Opera 5" rule. Basically, it feeds correct 
+length values to user agents that exhibit the parsing error exploited above yet get 
+the CSS box model right and understand the CSS2 parent-child selector. ALWAYS include
+a "be nice to Opera 5" rule every time you use the Tantek Celik hack (above). */
+body>#Header {height:24px;}
+
+#Content {
+	margin:0px 50px 0px 250px;
+	padding:10px;
+	background-color: #EFF3FF;
+	color: #4A5D84;
+	border-style: solid;
+	border-width: 4px;
+	border-color: #B5C7E7;
+}
+
+#Keywords {
+	margin:0px 50px 50px 250px;
+	padding:10px;
+	background-color: #B5C7E7;
+	line-height: 1;
+	color: #4A5D84;
+	border-style: solid;
+	border-width: 4px;
+	border-color: #B5C7E7;
+}
+
+#MetaArea {
+	position:absolute;
+	top:100px;
+	left:20px;
+	width:222px;
+	padding:5px;
+	line-height:17px;
+/* Again, the ugly brilliant hack. */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width:200px;
+}
+/* Again, "be nice to Opera 5". */
+body>#MetaArea {width:200px;}
+
+.metaBloc {
+	margin: 10px 0px 0px 0px;
+	padding: 2px 2px 2px 2px;
+	background-color: #EFF3FF;
+	color: #4A5D84;
+        border-style: solid;
+        border-width: 2px;
+        border-color: #B5C7E7;
+}
+
+.metaBlocTitle {
+	text-align: center;
+	display: block;
+	font-weight: 600;
+}
+
+.prime {
+        background-color: gold;
+        color: black;
+	text-align: center;
+	font-weight: 600;
+}
+

@@ -1,0 +1,53 @@
+        <\/><\/><\/><\/><\/><\/><\/><\/><\/><\/><\/><\/><\/><\/><\/><\/>
+    <\/></\></\></\></\></\></\></\></\></\></\></\></\></\></\></\></\><\/>
+    <\/>         ________          ________           ______            <\/>
+ </\>            ____  _/_____________  __ \_____________  /__             </\>
+<\/>              __  / _  ___/  _ \_  / / /  _ \  ___/_  //_/              <\/>
+</\>             __/ /  / /__ /  __/  /_/ //  __/ /__ _  ,<                 </\>
+<\/>             /___/  \___/ \___//_____/ \___/\___/ /_/|_|                <\/>
+</\>                                                                        </\>
+<\/>  (C) 2006-2007, Espace Win Open Source Project, some rights reserved.  <\/>
+</\>  Dev Team Leader : Sébastien Santoro aka Dereckson [DcK]               </\>
+<\/>                                                                        <\/>
+</\>  Support :                                                             <\/>
+</\>         WWW ... http://www.espace-win.info/EWOSP/IceDeck               </\>
+<\/>         IRC ... UnderNet #Win  irc://eu.undernet.org/Win               <\/>
+<\/>                                                                        <\/>
+<\/>  License :                                                             <\/>
+ <\/>        IceDeck is distributed under BSD license terms.               <\/>
+ </\>        See LICENSE file for more information.                       </\>
+    <\/>                                                                <\/>
+    </\><\/><\/><\/><\/><\/><\/><\/><\/><\/><\/><\/><\/><\/><\/><\/><\/></\>
+        </\></\></\></\></\></\></\></\></\></\></\></\></\></\></\></\>
+
+
+CONFIGURATION REQUIRED
+======================
+
+	PHP 5 or greater (see FAQ about PHP 4 compatibility)
+
+REMERCIEMENTS
+=============
+
+	Merci à Olivier Parra (Cl0ster) pour avoir préparé
+	les différents accents en deux ou trois tons.
+
+FAQ
+===
+
+PART ONE - INSTALLATION
+-----------------------
+
+Q1. Can I install IceDeck under PHP 4 ?
+
+A1. Code should be ok on PHP 4 if you edit classes constructurs definition.
+
+You've to replace __construct by the class name (e.g. Card for class Card).
+
+Another issue is  upload file handling:  we use  $_FILES['userfile']['error'] to
+get appropriate error code. This functionnaly has been introduced in PHP 4.2  so
+you've to hack some pieces of code if  you use a very old version. Try a  search
+on move_uploaded_file to see where you've to start.
+
+Please report any issue with  PHP 4 and all the  code you've written to share it
+with other users.

@@ -16,7 +16,7 @@
      </div>
 
      <div id=Footer>
-       	Powered by <a href='http://www.espace-win.info/EWOSP/IceDeck/'>IceDeck</a> &copy; 2006-2007 <a href='http://www.espace-win.info/EWOSP/'>Espace Win Open Source Project</a>
+       	Powered by <a href='http://www.espace-win.org/EWOSP/IceDeck/'>IceDeck</a> &copy; 2006-2007 <a href='http://www.espace-win.org/EWOSP/'>Espace Win Open Source Project</a>
      <div>
    </body>
 </html>

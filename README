@@ -10,7 +10,7 @@
 </\>  Dev Team Leader : Sébastien Santoro aka Dereckson [DcK]               </\>
 <\/>                                                                        <\/>
 </\>  Support :                                                             <\/>
-</\>         WWW ... http://www.espace-win.info/EWOSP/IceDeck               </\>
+</\>         WWW ... http://www.espace-win.org/EWOSP/IceDeck                </\>
 <\/>         IRC ... UnderNet #Win  irc://eu.undernet.org/Win               <\/>
 <\/>                                                                        <\/>
 <\/>  License :                                                             <\/>
@@ -51,3 +51,19 @@ on move_uploaded_file to see where you've to start.
 
 Please report any issue with  PHP 4 and all the  code you've written to share it
 with other users.
+
+Q2. How to handle IceDeck URL ?
+
+A2. Here the mod_rewrite Apache config:
+
+    RewriteEngine On
+    RewriteRule ^/$ /IceDeck.php
+    RewriteRule /([0-9]+) /IceDeck.php?action=view&id=$1
+    RewriteRule ^/edit/([0-9]+)$ /IceDeck.php?action=edit&id=$1
+    RewriteRule ^/clone/([0-9]+)$ /IceDeck.php?action=clone&id=$1
+    RewriteRule ^/pdf/([0-9]+)$ /IceDeck.php?action=pdf&id=$1
+    RewriteRule ^/print/([0-9]+)$ /IceDeck.php?action=print&id=$1
+    RewriteRule ^/search/(.+)$ /IceDeck.php?action=search&q=$1
+    RewriteRule ^/new$ /IceDeck.php?action=new
+    RewriteRule ^/cloud$ /IceDeck.php?action=cloud
+

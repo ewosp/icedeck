@@ -21,6 +21,8 @@
   *
   */
 
+ error_reporting(0);
+
  /*
   * configuration: the location of the style fragments, and 
   * a list of available styles.
@@ -46,6 +48,11 @@
   * http://example.com/progress.php/style/width/done/total
   */
  $path_info = $_SERVER['ORIG_PATH_INFO'] ? $_SERVER['ORIG_PATH_INFO'] : $_SERVER['PATH_INFO'];
+ if ($path_info == '') {
+	//Kludge if PATH_INFO isn't there
+	$pos = strpos($_SERVER["REQUEST_URI"], 'ProgressBar.php');
+	$path_info = substr($_SERVER["REQUEST_URI"], $pos + 15);
+ }
  $parts = explode('/', $path_info);
  $style = $parts[1];
  $width = $parts[2];

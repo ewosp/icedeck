@@ -62,8 +62,8 @@
         
                 case 'search':
 		include('search.php');
-		break;                
-			
+		break;
+
 		case '':
 		include('home.php');
 		break;
@@ -75,7 +75,7 @@
                 $Title = 'Invalid URL';
                 include('errorbox.php');
 		break;
-        
+
                 default:
                 $Description = 'Action ' . $_GET['action'] . ' doesn\'t exist.';
                 $Title = 'Invalid URL';

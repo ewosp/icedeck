@@ -31,7 +31,7 @@
 	//
 
 	//We need a query
-	$query = split(' ', $_GET['q']);
+	$query = explode(' ', $_GET['q']);
 
 	require_once('_includes/IceDeck/Keywords.php');
 	if (count($cards_id = Keywords::GetResources('C', $query))) {

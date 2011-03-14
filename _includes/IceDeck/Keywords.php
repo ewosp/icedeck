@@ -14,7 +14,7 @@ class Keywords {
 			}
 			$keyword_clause = '(' . join(" OR ", $tab) . ')';
 		}
-		$keywords = split("k.keyword_word = '' OR ", $keyword_clause);
+		$keywords = explode("k.keyword_word = '' OR ", $keyword_clause);
 		$sql = "SELECT DISTINCT parent_id FROM " . TABLE_RELATIONS . " r, " . TABLE_KEYWORDS . " k WHERE $keyword_clause "
 		     . "AND r.parent_type = '$resource_type' AND r.children_type = 'K' AND r.children_id = k.keyword_id ";
 		if (!$result = $db->sql_query($sql)) message_die(SQL_ERROR, "Can't perform search", '', __LINE__, __FILE__, $sql);

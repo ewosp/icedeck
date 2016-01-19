@@ -26,10 +26,10 @@
 		</div>
 
 		<div class="metaBloc metaInfos">
-			<span class="metaBlocTitle">À propos de cet IceDeck</span>
-			<p>La majorité des cartes (toutes celles cohérentes) sont des cartes réelles répondant à la question <b>"que pouvez-vous faire 
+			<span class="metaBlocTitle">Ã€ propos de cet IceDeck</span>
+			<p>La majoritÃ© des cartes (toutes celles cohÃ©rentes) sont des cartes rÃ©elles rÃ©pondant Ã  la question <b>"que pouvez-vous faire 
 pour aider Espace Win ?</b>.</p>
-			<p>Il s'agit également d'un lieu de développement.</p>
+			<p>Il s'agit Ã©galement d'un lieu de dÃ©veloppement.</p>
 		</div>
 	</div>
 

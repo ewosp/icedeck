@@ -86,12 +86,12 @@ function Texte2HTML ($texte, $htmlentities = false)
 	if ($htmlentities) $texte = htmlentities($texte);
 
 	//Rendre les e-mails cliquables
-	$texte = eregi_replace ("([_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)+)", "<A HREF=\"mailto:\\1\">\\1</A>", $texte);
+	$texte = preg_replace ("/([_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)+)/i", "<A HREF=\"mailto:\\1\">\\1</A>", $texte);
 
 	//Rendre les URLs cliquables
 	//TODO www
 	//TODO Traiter différemment www.espace-win.net
-	$texte = eregi_replace ("([[:alnum:]]+)://([^[:space:]]*)([[:alnum:]#?/&=])", "<A HREF=\"\\1://\\2\\3\" TARGET=\"_blank\">\\1://\\2\\3</A>", $texte);
+	$texte = preg_replace ("@([[:alnum:]]+)://([^[:space:]]*)([[:alnum:]#?/&=])@i", "<A HREF=\"\\1://\\2\\3\" TARGET=\"_blank\">\\1://\\2\\3</A>", $texte);
 	
 	// \n -> <br />
 	$texte = nl2br ($texte);
@@ -164,13 +164,13 @@ function genereString($format)
 
     for ($i=0;$i<strlen($format);$i++)
     {
-        if (ereg("^[a-zA-Z]",$format[$i]))
+        if (preg_match("/^[a-zA-Z]/",$format[$i]))
         {
             $add=$t_alphabet[mt_rand() % sizeof($t_alphabet)];
-            if (ereg("^[a-z]",$format[$i]))
+            if (preg_match("/^[a-z]/",$format[$i]))
                 $add=strtolower($add);
         }
-        elseif(ereg("^[0-9]",$format[$i]))
+        elseif(preg_match("/^[0-9]/",$format[$i]))
             $add=$t_number[mt_rand() % sizeof($t_number)];
         else $add="?";
 
